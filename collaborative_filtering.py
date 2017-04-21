@@ -1,3 +1,8 @@
+"""
+This program calculates the cosine similarity between users in order to implement collaborative filtering
+Author: Haoyou Liu
+"""
+
 import csv
 import numpy
 from sklearn.metrics import pairwise_distances

@@ -1,3 +1,8 @@
+"""
+Data processing
+ratio: the playcount of a artist / the playcount of all artists
+Author: Haoyou Liu
+"""
 from openpyxl import load_workbook
 import csv
 import sys

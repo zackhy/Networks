@@ -1,3 +1,8 @@
+"""
+This program splits the data into train data and test data
+Author: Haoyou Liu
+"""
+
 import csv
 import json
 import random

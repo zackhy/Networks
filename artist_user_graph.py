@@ -1,5 +1,7 @@
 """
-This program draws the networks of artists and users
+This program draws the graph of artist-user network
+output: gml files
+Author: Haoyou Liu
 """
 
 import networkx as nx

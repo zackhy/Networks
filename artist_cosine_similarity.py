@@ -1,5 +1,6 @@
 """
 This program calculates the cosine similarity between artists
+Author: Haoyou Liu
 """
 
 import csv
@@ -13,27 +14,7 @@ def cosine_data(ratio):
         user_dic = {}
         artist_dic = {}
         count = 1
-        # Cosine similarity when vector is 0, 1
-        # for line in incsv:
-        #     try:
-        #         if float(line[3]) < ratio:
-        #             continue
-        #     except:
-        #         pass
-        #     if line[0] in artist_dic:
-        #         if line[1] in user_dic:
-        #             artist_dic[line[0]].append(user_dic[line[1]])
-        #         else:
-        #             artist_dic[line[0]].append(count)
-        #     else:
-        #         if line[1] in user_dic:
-        #             artist_dic[line[0]] = [user_dic[line[1]]]
-        #         else:
-        #             artist_dic[line[0]] = [count]
-        #
-        #     if line[1] not in user_dic:
-        #         user_dic[line[1]] = count
-        #         count += 1
+
         for line in incsv:
             try:
                 if float(line[3]) < ratio:
@@ -85,18 +66,3 @@ with open('train_cosine_similarity.csv', 'w', newline='', encoding='utf-8') as o
             denominator = math.sqrt(denom_art1)*math.sqrt(denom_art2)
             cosine = numerator / denominator
             outcsv.writerow([art1] + [art2] + [cosine])
-
-    # done = []
-    # for art1 in artist_dic.keys():
-    #     for art2 in artist_dic.keys():
-    #         if art1 == art2 or (art1, art2) in done or (art2, art1) in done:
-    #             continue
-    #
-    #         numerator = len(set(artist_dic[art1]).intersection(artist_dic[art2]))
-    #
-    #         denominator = math.sqrt(len(artist_dic[art1]))*math.sqrt(len(artist_dic[art2]))
-    #         cosine = numerator/denominator
-    #
-    #         outcsv.writerow([art1] + [art2] + [cosine])
-    #
-    #         done.append((art1, art2))

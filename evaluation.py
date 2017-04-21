@@ -1,6 +1,8 @@
 """
-This program evaluate the accuracy of different models
+This program evaluates the accuracy of cosine similarity and collaborative filtering
+Author: Haoyou Liu
 """
+# from __future__ import division
 import random
 import csv
 
@@ -85,7 +87,6 @@ with open('train_data.csv', encoding='utf-8') as f:
                 result = sorted_prediction[:50]
                 # print (result)
                 # print (len(result))
-                # print (result)
 
                 if test_data[user] in result:
                     accuracy += 1
